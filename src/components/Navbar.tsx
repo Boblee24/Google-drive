@@ -24,7 +24,7 @@ const Navbar = () => {
           placeholder="Search in Drive"
           autoComplete="off"
           aria-label="Search talk"
-          className="pr-3 pl-12 py-2 w-[600px] h-12 placeholder-gray-500 bg-[#c8dde0] focus:bg-white rounded-3xl
+          className="pr-3 pl-12 py-2 w-[600px] h-12 placeholder-gray-500 bg-[#cddee0] focus:bg-white rounded-3xl
             border-none focus:shadow-lg ring-gray-200 focus:ring-gray-500 focus:outline-none"
         />
       </div>

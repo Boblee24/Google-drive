@@ -8,10 +8,15 @@ import Starred from "../pages/routes/Starred"
 import Spam from "../pages/routes/Spam"
 import Trash from "../pages/routes/Trash"
 import Storage from "../pages/routes/Storage"
+import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline"
 
-const Main = () => {
+interface MainProps {
+  isDetail: boolean;
+  handleDetail: () => void;
+}
+const Main: React.FC<MainProps> = ({handleDetail, isDetail}) => {
   return (
-    <div className='bg-white w-full h-full flex-grow rounded-3xl p-4 m-auto flex text-3xl font-bold items-center justify-center'>
+    <div className='bg-white w-full h-full flex-grow rounded-3xl p-4 m-auto text-3xl font-bold flex justify-between items-start'>
       <Routes>
         <Route path="/" element={<Route_home/>} />
         <Route path="/drive" element={<My_drive/>} />
@@ -23,6 +28,9 @@ const Main = () => {
         <Route path="/trash" element={<Trash/>} />
         <Route path="/storage" element={<Storage/>} />
       </Routes>
+      <button onClick={handleDetail} className={`${isDetail ? "" : "bg-slate-200 p-3 rounded-full"} `}>
+        <QuestionMarkCircleIcon className="w-6 h-6"/>
+      </button>
     </div>
   )
 }
