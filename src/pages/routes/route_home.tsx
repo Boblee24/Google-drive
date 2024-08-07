@@ -1,6 +1,8 @@
 const route_home = () => {
   return (
-    <div>Router Home</div>
+    <div>
+        <div className="w-[]"></div>
+    </div>
   )
 }
 
