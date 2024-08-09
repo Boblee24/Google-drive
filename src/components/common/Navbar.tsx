@@ -1,4 +1,4 @@
-import logo from "../assets/drive-48.svg";
+import logo from "../../assets/drive-48.svg";
 import {
   Cog6ToothIcon,
   QuestionMarkCircleIcon,

@@ -4,7 +4,7 @@ import { ClockIcon as ClockIconSolid, CloudIcon as CloudIconSolid, ComputerDeskt
 
 import { Link, useLocation } from "react-router-dom"
 import Main from "./Main"
-import Details from "../pages/Details";
+import Details from "../../pages/Details";
 import { useState } from "react";
 
 const Sidebar = () => {
