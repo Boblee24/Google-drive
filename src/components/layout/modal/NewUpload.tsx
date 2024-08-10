@@ -1,6 +1,6 @@
 const NewUpload = () => {
   return (
-    <div>NewUpload</div>
+    <div>this is a new component, which i created yesterday</div>
   )
 }
 
