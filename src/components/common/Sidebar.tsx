@@ -9,11 +9,18 @@ import { useState } from "react";
 
 const Sidebar = () => {
   const [isDetail, setIsDetail] = useState<boolean>(false)
+  const [isUploadModalVisible, setIsUploadModalVisible] = useState<boolean>(false)
   const location = useLocation()
   const isActive = (path: string) => location.pathname == path
   const handleDetail = () => {
     setIsDetail(!isDetail)
   }
+  const handleNewButtonClick = () => {
+    setIsUploadModalVisible(!isUploadModalVisible)
+  }
+
+
+
   return (
     <div className="py-4 flex flex-grow gap-4 w-full sidebar">
       <div className="w-64">

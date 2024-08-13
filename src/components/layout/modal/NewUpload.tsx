@@ -1,8 +1,15 @@
 const NewUpload = () => {
   return (
-    <div>
-      <div>this is a new component, which i created yesterday</div>
-      <div>Have  not really have time to make any significant changes</div>
+    <div className="bg-slate-300 absolute">
+      <div>
+        <button>
+          New Folder
+        </button>
+      </div>
+      <div>
+        <button onClick={() =>console.log("create file")}>File Upload</button>
+        <button onClick={() => console.log("create folder")}>Folder Upload</button>
+      </div>
     </div>
 
   )
