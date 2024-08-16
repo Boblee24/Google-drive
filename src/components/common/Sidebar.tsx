@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom"
 import Main from "./Main"
 import Details from "../../pages/Details";
 import { useState } from "react";
+import NewUpload from "../layout/modal/NewUpload";
 
 const Sidebar = () => {
   const [isDetail, setIsDetail] = useState<boolean>(false)
@@ -16,7 +17,10 @@ const Sidebar = () => {
     setIsDetail(!isDetail)
   }
   const handleNewButtonClick = () => {
-    setIsUploadModalVisible(!isUploadModalVisible)
+    setIsUploadModalVisible(true)
+  }
+  const closeModal = () => {
+    setIsUploadModalVisible(false)
   }
 
 
@@ -24,10 +28,11 @@ const Sidebar = () => {
   return (
     <div className="py-4 flex flex-grow gap-4 w-full sidebar">
       <div className="w-64">
-        <button className="flex items-center gap-4 bg-white p-5 rounded-3xl shadow-xl">
+        <button onClick={handleNewButtonClick} className="flex items-center gap-4 bg-white p-5 rounded-3xl shadow-xl">
         <PlusIcon className="h-7 w-7 text-black" />
         <h1 className="text-lg">New</h1>
       </button>
+      <NewUpload isVisible = {isUploadModalVisible} closeModal = {closeModal}  />
       <div className="flex flex-col gap-4 my-2">
         <div className="">
             <Link to="/" className={`flex items-center gap-4  my-2 hover:bg-[#cddee0] ${isActive("/") ? "bg-[#afe5f3]" : ''} duration-300 px-8 p-1 rounded-3xl`}>
