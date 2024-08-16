@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+<<<<<<< HEAD
     "firebase": "^10.13.0",
+=======
+    "firebase": "^10.12.5",
+>>>>>>> 9630839274c8c379c9dd3d25cc7f574fa9ae7e44
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-dropzone": "^14.2.3",
