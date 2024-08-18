@@ -35,7 +35,7 @@ const Sidebar = () => {
       <NewUpload isVisible = {isUploadModalVisible} closeModal = {closeModal}  />
       <div className="flex flex-col gap-4 my-2">
         <div className="">
-            <Link to="/" className={`flex items-center gap-4  my-2 hover:bg-[#cddee0] ${isActive("/") ? "bg-[#afe5f3]" : ''} duration-300 px-8 p-1 rounded-3xl`}>
+            <Link to="/" className={`flex items-center gap-4  my-2 ${isActive("/") ? "bg-[#afe5f3]" : ''} duration-300 px-8 p-1 rounded-3xl`}>
               {isActive("/") ? <HomeIconSolid className="h-6 w-6" /> : <HomeIcon className="h-6 w-6" />}
             <h2>Home</h2>
           </Link>

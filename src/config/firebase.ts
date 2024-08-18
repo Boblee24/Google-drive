@@ -6,14 +6,13 @@ import {getAuth, GoogleAuthProvider} from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_Api_key,
+  apiKey: import.meta.env.VITE_Api_Key,
   authDomain: "drive-clone-4c5ac.firebaseapp.com",
   projectId: "drive-clone-4c5ac",
   storageBucket: "drive-clone-4c5ac.appspot.com",
   messagingSenderId: "1058247160985",
   appId: "1:1058247160985:web:3bce8f634d121cb8fab408",
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)
