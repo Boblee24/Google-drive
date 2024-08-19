@@ -9,7 +9,7 @@ import { useState } from "react";
 import NewUpload from "../layout/modal/NewUpload";
 
 const Sidebar = () => {
-  const [isDetail, setIsDetail] = useState<boolean>(false)
+  const [isDetail, setIsDetail] = useState<boolean>(true)
   const [isUploadModalVisible, setIsUploadModalVisible] = useState<boolean>(false)
   const location = useLocation()
   const isActive = (path: string) => location.pathname == path

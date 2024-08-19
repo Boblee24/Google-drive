@@ -5,7 +5,7 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 const NewUpload: React.FC<{ isVisible: boolean; closeModal: () => void }> = ({ isVisible, closeModal }) => {
   return (
     <div
-      className={`fixed bg-white w-80 h-52 z-50 transition-opacity duration-300 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      className={`fixed bg-white w-80 h-52 z-50 transition-opacity duration-300 ease-in-out border-[gray] border-solid border-2 rounded-lg ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
     >
       <div className="px-2 py-1 my-2 hover:bg-[#cddee0]">
