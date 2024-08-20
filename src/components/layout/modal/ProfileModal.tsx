@@ -22,9 +22,9 @@ const ProfileModal: React.FC<ProfileProps> = ({ isOpen, onClose }) => {
           </button>
           <div>
             <div className="flex justify-center">
-              <img src={auth.currentUser?.photoURL || ""} alt="user" className="w-16 h-16 rounded-full"/>
+              <img src={auth.currentUser?.photoURL || ""} alt="user" className="w-16 h-16 rounded-full"/> {/* this got the user display picture from the api */}
             </div>
-            <h2>Hello, {auth.currentUser?.displayName?.split(' ')[1]}</h2>
+        <h2>Hello, {auth.currentUser?.displayName?.split(' ')[1]}</h2>{/** TODO: Add user name by cutting of the first name **/}
           </div>
       </div>
   )
