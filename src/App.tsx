@@ -4,12 +4,13 @@ import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import Loading from './pages/Loading';
 
 function App() {
   const [user, loading] = useAuthState(auth);
 
   if (loading) {
-    return <div>Loading...</div>; // Show a loading state while authentication is being checked
+    return <Loading/>; // Show a loading state while authentication is being checked
   }
 
   return (
