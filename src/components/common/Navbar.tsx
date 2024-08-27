@@ -8,25 +8,15 @@ import {
   MagnifyingGlassIcon
 } from "@heroicons/react/24/solid";
 import { auth } from "../../config/firebase";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import ProfileModal from "../layout/modal/ProfileModal";
+import useToggle from "../../hooks/useToggle";
 
 const Navbar = () => {
+  const {isOpen, handleModalClick} = useToggle()
   const profilePicRef = useRef<HTMLDivElement>(null!);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   // const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
-  const handleOpenModal = () => {
-    // const rect = profilePicRef.current!.getBoundingClientRect();
-    // setModalPosition({
-    //   top: rect.bottom + window.scrollY, // Offset for window scroll
-    //   left: rect.left + window.scrollX,  // Offset for window scroll
-    // });
-    setIsModalOpen(true);
-  };
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
   return (
     <div className="flex items-center w-full h-full relative">
       <a href="/" className="flex items-center">
@@ -51,10 +41,10 @@ const Navbar = () => {
         <Cog6ToothIcon className="w-7 h-7" />
         <QuestionMarkCircleIcon className="w-7 h-7" />
         <Squares2X2Icon className="w-7 h-7" />
-        <div ref={profilePicRef} onClick={handleOpenModal} className="rounded-full w-8 h-8 border-2 border-[gray] border-solid ">
+        <div ref={profilePicRef} onClick={handleModalClick} className="rounded-full w-8 h-8 border-2 border-[gray] border-solid ">
           <img src={auth.currentUser?.photoURL || ""} alt="user-dp" className="rounded-full w-8 h-8" />
         </div>
-        <ProfileModal isOpen={isModalOpen} onClose={handleCloseModal} />
+        <ProfileModal isOpen={isOpen} onClose={handleModalClick} />
       </div>
     </div>
   );
