@@ -12,19 +12,11 @@ import useToggle from "../../hooks/useToggle";
 const Sidebar = () => {
   const {isOpen, handleModalClick} = useToggle()
   const [isDetail, setIsDetail] = useState<boolean>(true)
-  // const [isUploadModalVisible, setIsUploadModalVisible] = useState<boolean>(false)
   const location = useLocation()
   const isActive = (path: string) => location.pathname == path
   const handleDetail = () => {
     setIsDetail(!isDetail)
   }
-  // const handleNewButtonClick = () => {
-  //   setIsUploadModalVisible(true)
-  // }
-  // const closeModal = () => {
-  //   setIsUploadModalVisible(false)
-  // }
-
 
 
   return (

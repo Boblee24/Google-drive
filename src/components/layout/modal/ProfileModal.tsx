@@ -21,10 +21,10 @@ const ProfileModal: React.FC<ProfileProps> = ({ isOpen, onClose }) => {
       console.log("Can't sign this shit out")
     }
   }
-  if (!isOpen) return null;
   return (
     <div
-      className="absolute bg-white p-6 rounded-lg shadow-lg w-[399px] top-10 z-50 right-0"
+      className={`absolute bg-white p-6 transition-opacity duration-700 ease-in-out rounded-lg shadow-lg w-[399px] top-10 z-50 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        } right-0`}
       //   style={{
       //       top: position.top,
       //       left: position.left,
