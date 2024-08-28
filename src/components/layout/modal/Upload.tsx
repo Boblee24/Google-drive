@@ -1,6 +1,13 @@
 const Upload = () => {
+    const uploadFile = () => {
+
+    }
   return (
-    <div></div>
+
+    <div>
+        <input type="file" />
+        <button onClick={uploadFile}>Upload file</button>
+    </div>
   )
 }
 
